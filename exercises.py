@@ -38,13 +38,13 @@ print_greeting()
 # - Ensure to provide feedback for non-alphabetical or invalid entries.
 
 def check_letter():
-    letter = input("please type a letter:")
+    letter = input("please type a letter:").lower()
     if letter in "aeiou":
         print(f"the letter {letter} is a vowel")
     else:
         print(f"the letter {letter} is a consonant") 
     
-# check_letter()
+check_letter()
 
 # Exercise 2: Old enough to vote?
 #
@@ -179,15 +179,18 @@ def determine_season():
         determine_season()
     elif month == "Feb" and day > 28:
         print("Feb only has 28 days, please try again.")
+        return
     elif month in ["Jan", "Mar", "May", "Jul", "Aug", "Oct", "Dec"] and day > 31:
         print(f"Please enter a valid day for {month}. Try again.")
+        return
     elif day > 30:
         print(f"Please enter a valid day for {month}. Try Again.")
+        return
     else:
         None
-      
     
-    if month in ["Dec", "Jan", "Feb"] or (month == "Mar" and day < 20):
+    
+    if month in [ "Jan", "Feb"] or (month == "Dec" and day >20) or (month == "Mar" and day < 20):
         season = "Winter"
     elif month in ["Apr", "May"] or (month == "Mar" and day >= 20) or (month == "Jun" and day <= 20):
         season = "Spring"
@@ -199,9 +202,9 @@ def determine_season():
         season = None
 
     if season: 
-        print(f"{month} {day} is in {season}")
+        print(f"{month} {day} is in {season}.")
     else: 
-        "Wrong Date"
+        print("Wrong Date")
 
 
 # Call the function
