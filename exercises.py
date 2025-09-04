@@ -1,3 +1,25 @@
+# Exercise 0: Example
+#
+# This is a practice exercise to help you understand how to write code "inside" a provided Python function.
+#
+# We'll create a function that checks a condition and prints a specific greeting message based on that condition.
+#
+# Requirements:
+# - The function is named `print_greeting`.
+# - Inside the function, declare a variable `python_is_fun` and set it to `True`.
+# - Use a conditional statement to check if `python_is_fun` is `True`.
+# - If `python_is_fun` is `True`, print the message "Python is fun!"
+
+def print_greeting():
+    # Your code goes here. Remember to indent!
+    python_is_fun = True
+    if python_is_fun:
+        print("Python is fun!")
+
+# Call the function
+print_greeting()
+
+
 # Exercise 1: Vowel or Consonant
 #
 # Write a Python function named `check_letter` that determines if a given letter
@@ -45,14 +67,14 @@ def check_voting_eligibility():
     age = int(input("Please enter your age:"))
     if age < 0:
       print("You must enter a valid age. Please try again ")
-      check_voting_eligibility()
+      # check_voting_eligibility()
     elif age >= legal_age:
       print(f"Your age is {age} and your are eligible to vote.")
     else:
       print(f"You are not eligible to vote")
 
 # Call the function
-check_voting_eligibility()
+# check_voting_eligibility()
 
 
 # Exercise 3: Calculate Dog Years
@@ -73,8 +95,18 @@ check_voting_eligibility()
 # - Convert the string input to an integer using `int()`.
 # - Apply conditional logic to perform the correct age calculation based on the dog's age.
 
-# def calculate_dog_years():
-#     dog_age= 
+def calculate_dog_years():
+    dog_age = int(input("Input a dog's age: "))
+    total = 0
+    if dog_age < 1:
+        print("This age is invalid. Try again")
+        calculate_dog_years()
+    elif dog_age <= 2:
+        total = dog_age * 10
+        print(f"The dog's age in dog years is {total} ")
+    else: 
+        total = 20 + (( dog_age - 2 ) * 7)
+        print(f"The dog's age in dog years is {total} ")
 
 # # Call the function
-# calculate_dog_years()
+calculate_dog_years()
