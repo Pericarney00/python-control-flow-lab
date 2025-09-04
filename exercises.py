@@ -38,11 +38,11 @@ print_greeting()
 # - Ensure to provide feedback for non-alphabetical or invalid entries.
 
 def check_letter():
-  letter = input("please type a letter:")
-  if letter in "aeiou":
-    print(f"the letter {letter} is a vowel")
-  else:
-    print(f"the letter {letter} is a consonant") 
+    letter = input("please type a letter:")
+    if letter in "aeiou":
+        print(f"the letter {letter} is a vowel")
+    else:
+        print(f"the letter {letter} is a consonant") 
     
 # check_letter()
 
@@ -66,15 +66,15 @@ def check_voting_eligibility():
     legal_age = 18
     age = int(input("Please enter your age:"))
     if age < 0:
-      print("You must enter a valid age. Please try again ")
-      # check_voting_eligibility()
+        print("You must enter a valid age. Please try again ")
+        check_voting_eligibility()
     elif age >= legal_age:
-      print(f"Your age is {age} and your are eligible to vote.")
+        print(f"Your age is {age} and your are eligible to vote.")
     else:
-      print(f"You are not eligible to vote")
+        print(f"You are not eligible to vote")
 
 # Call the function
-# check_voting_eligibility()
+check_voting_eligibility()
 
 
 # Exercise 3: Calculate Dog Years
@@ -100,7 +100,7 @@ def calculate_dog_years():
     total = 0
     if dog_age < 1:
         print("This age is invalid. Try again")
-        # calculate_dog_years()
+        calculate_dog_years()
     elif dog_age <= 2:
         total = dog_age * 10
         print(f"The dog's age in dog years is {total} ")
@@ -109,7 +109,7 @@ def calculate_dog_years():
         print(f"The dog's age in dog years is {total} ")
 
 # # Call the function
-# calculate_dog_years()
+calculate_dog_years()
 
 # Exercise 4: Weather Advice
 #
@@ -146,7 +146,7 @@ def weather_advice():
         print("You are a wizard Harry")
 
 # Call the function
-# weather_advice()
+weather_advice()
 
 
 # Exercise 5: What's the Season?
